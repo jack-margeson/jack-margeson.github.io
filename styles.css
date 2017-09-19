@@ -4,4 +4,12 @@ img {
 
 body {
     text-align: center;
+    font-family: "Arial";
+    background-color: #e6ffe6;
+}
+
+p2{
+    font-size: 80%;
+    height: 200px;
+    vertical-align: bottom;
 }
