@@ -4,12 +4,10 @@ img {
 
 body {
     text-align: center;
-    font-family: "Arial";
+    font-family: "Roboto";
     background-color: #e6ffe6;
 }
 
-p2{
-    font-size: 80%;
-    height: 200px;
-    vertical-align: bottom;
+div {
+    font-size:78%;
 }
