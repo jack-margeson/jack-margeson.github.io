@@ -1,0 +1,13 @@
+img {
+    width: 200px;
+}
+
+html {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto";
+    background-color: #9AE5D4;
+    text-align: center;
+}
