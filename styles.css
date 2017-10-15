@@ -42,3 +42,11 @@ div2 {
   animation: blink 1s step-start 0s infinite;
   -webkit-animation: blink 1s step-start 0s infinite;
 }
+
+div3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, +400%);
+    font-size: 200%
+}
