@@ -1,0 +1,17 @@
+@font-face {
+    font-family: terminal;
+    src: url('terminal.ttf'),
+    url('terminal.eot');
+}
+
+html {
+    background-color: #2C2A2A;
+    color: white;
+    overflow: hidden;
+}
+
+div {
+    font-family: 'terminal';
+    font-size: 30px;
+    text-align: left;
+}
