@@ -11,3 +11,8 @@ html {
     background-color: #9AE5D4;
     text-align: center;
 }
+
+#link {
+    text-decoration: none;
+    color: #ffff00;
+}
