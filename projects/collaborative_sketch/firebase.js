@@ -23,15 +23,28 @@ function setup() {
   pointsData.on("child_removed", function () {
     points = [];
   });
-
+  
   canvas.mousePressed(drawPoint);
-  canvas.mouseMoved(drawPointIfMousePressed);
+  canvas.mouseMoved(mousecheck);
 }
 
-function drawPointIfMousePressed() {
+function mousecheck() {
   if (mouseIsPressed) {
     drawPoint();
   }
+}
+
+$("#saveDrawing").on("click", saveDrawing);
+
+function saveDrawing() {
+	saveCanvas();
+}
+
+$("#clearDrawing").on("click", clearDrawing);
+
+function clearDrawing() {
+	pointsData.remove();
+	points = [];
 }
 
 function draw() {
@@ -45,15 +58,4 @@ function draw() {
 
 function drawPoint() {
 	pointsData.push({x: mouseX, y: mouseY});
-}
-
-function saveDrawing() {
-	saveCanvas();
-	console.log("Drawing saved!")
-}
-
-function clearDrawing() {
-	console.log("Clearing drawing...")
-	pointsData.remove();
-	points = [];
 }
