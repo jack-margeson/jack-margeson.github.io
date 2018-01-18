@@ -34,13 +34,9 @@ function mousecheck() {
   }
 }
 
-$("#saveDrawing").on("click", saveDrawing);
-
 function saveDrawing() {
-	saveCanvas();
+	saveCanvas('drawing');
 }
-
-$("#clearDrawing").on("click", clearDrawing);
 
 function clearDrawing() {
 	pointsData.remove();
