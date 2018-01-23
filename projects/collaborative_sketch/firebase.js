@@ -8,22 +8,23 @@ var config = {
 	messagingSenderId: "858865570515"
 };
 firebase.initializeApp(config);
-  
+
 var pointsData = firebase.database().ref();
 var points = [];
-	
+
 function setup() {
 	var canvas = createCanvas(600, 600);
+	canvas.parent('canvas');
 	background(255);
 	fill(0);
-		
+
   pointsData.on("child_added", function (point) {
     points.push(point.val());
   });
   pointsData.on("child_removed", function () {
     points = [];
   });
-  
+
   canvas.mousePressed(drawPoint);
   canvas.mouseMoved(mousecheck);
 }
@@ -43,9 +44,14 @@ function clearDrawing() {
 	points = [];
 }
 
+function clearDrawingButton() {
+	pointsData.remove();
+	points = [];
+}
+
 function draw() {
 	background(255);
-	
+
 	for (var i = 0; i < points.length; i++) {
 	var point = points[i];
 	ellipse(point.x, point.y, 5, 5);
